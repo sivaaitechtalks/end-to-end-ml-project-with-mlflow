@@ -1,0 +1,5 @@
+[2025-11-09 16:11:36,765] INFO - yaml file: config\config.yaml loaded successfully
+[2025-11-09 16:11:36,781] INFO - yaml file: params.yaml loaded successfully
+[2025-11-09 16:11:36,783] INFO - yaml file: schema.yaml loaded successfully
+[2025-11-09 16:11:36,785] INFO - created directory at: artifacts
+[2025-11-09 16:11:36,785] INFO - created directory at: artifacts/data_ingestion
