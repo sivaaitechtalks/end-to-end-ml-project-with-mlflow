@@ -23,7 +23,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+            python -m pip install --upgrade pip
+            pip install --only-binary :all: pyarrow
+            pip install -r requirements.txt
+
 
       - name: Print success message
         if: success()
