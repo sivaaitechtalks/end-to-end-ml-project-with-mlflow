@@ -27,7 +27,6 @@ jobs:
             pip install --only-binary :all: pyarrow
             pip install -r requirements.txt
 
-
       - name: Print success message
         if: success()
         run: echo "✅ All tests passed successfully!"
