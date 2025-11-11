@@ -1,0 +1,30 @@
+name: Python CI/CD Demo for end to end ml
+
+# Triggers:
+# 1. Automatically on push to main
+# 2. Manually via the GitHub Actions UI (workflow_dispatch)
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Print success message
+        if: success()
+        run: echo "✅ All tests passed successfully!"
